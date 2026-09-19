@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.1 on darwin)" generated="2026-09-19T07:10:53.584369" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramewok" source="/Users/poonampatnaik/PycharmProjects/RobotFramewok">
+<suite id="s1-s1" name="Tests" source="/Users/poonampatnaik/PycharmProjects/RobotFramewok/tests">
+<suite id="s1-s1-s1" name="Homepage" source="/Users/poonampatnaik/PycharmProjects/RobotFramewok/tests/homepage.robot">
+<test id="s1-s1-s1-t1" name="Validate Homepage Details" line="6">
+<kw name="Navigate to Homepage">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2026-09-19T07:10:53.741864" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2026-09-19T07:10:53.738787" elapsed="1.116709"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-19T07:10:54.861681" level="INFO">Opening url 'https://www.electrolux.it/'</msg>
+<arg>https://www.electrolux.it/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-19T07:10:54.860488" elapsed="0.436387"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-09-19T07:10:55.297641" elapsed="2.232156"/>
+</kw>
+<doc>This keyword navigates to the homepage of the website.</doc>
+<status status="PASS" start="2026-09-19T07:10:53.738368" elapsed="3.791623"/>
+</kw>
+<kw name="Accept Cookies for website">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>onetrust-group-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.530921" elapsed="0.016918"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-19T07:10:57.548159" level="INFO">Clicking button 'onetrust-accept-btn-handler'.</msg>
+<arg>onetrust-accept-btn-handler</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.547968" elapsed="0.063044"/>
+</kw>
+<doc>This keyword accepts the cookies for the website.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.530543" elapsed="0.080608"/>
+</kw>
+<kw name="Validate Homepage Category section">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.home-page__container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.611869" elapsed="0.006349"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-19T07:10:57.680824" level="INFO">Element 'css:._category__title_qys5y_9' is displayed.</msg>
+<arg>css:._category__title_qys5y_9</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.618321" elapsed="0.062579"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-19T07:10:57.687567" level="INFO">${category_title} = Acquista per categorie</msg>
+<var>${category_title}</var>
+<arg>css:._category__title_qys5y_9</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.681016" elapsed="0.006579"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${category_title}</arg>
+<arg>Acquista per categorie</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.687750" elapsed="0.000406"/>
+</kw>
+<doc>This keyword validates the homepage category section of the website.</doc>
+<status status="PASS" start="2026-09-19T07:10:57.611453" elapsed="0.076746"/>
+</kw>
+<doc>This test case validates the homepage details of the website.</doc>
+<status status="PASS" start="2026-09-19T07:10:53.737982" elapsed="3.950343"/>
+</test>
+<doc>To test the homepage of the website</doc>
+<status status="PASS" start="2026-09-19T07:10:53.604742" elapsed="4.084056"/>
+</suite>
+<status status="PASS" start="2026-09-19T07:10:53.604325" elapsed="4.084849"/>
+</suite>
+<status status="PASS" start="2026-09-19T07:10:53.585232" elapsed="4.104135"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RobotFramewok" id="s1" pass="1" fail="0" skip="0">RobotFramewok</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">RobotFramewok.Tests</stat>
+<stat name="Homepage" id="s1-s1-s1" pass="1" fail="0" skip="0">RobotFramewok.Tests.Homepage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
