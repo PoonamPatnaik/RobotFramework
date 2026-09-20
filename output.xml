@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.14.1 on darwin)" generated="2026-09-19T07:10:53.584369" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.14.1 on darwin)" generated="2026-09-20T07:49:12.112914" rpa="false" schemaversion="5">
 <suite id="s1" name="RobotFramewok" source="/Users/poonampatnaik/PycharmProjects/RobotFramewok">
 <suite id="s1-s1" name="Tests" source="/Users/poonampatnaik/PycharmProjects/RobotFramewok/tests">
 <suite id="s1-s1-s1" name="Homepage" source="/Users/poonampatnaik/PycharmProjects/RobotFramewok/tests/homepage.robot">
-<test id="s1-s1-s1-t1" name="Validate Homepage Details" line="6">
+<test id="s1-s1-s1-t1" name="Validate Homepage Details" line="11">
 <kw name="Navigate to Homepage">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2026-09-19T07:10:53.741864" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
+<msg time="2026-09-20T07:49:12.290114" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${BROWSER}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2026-09-19T07:10:53.738787" elapsed="1.116709"/>
+<status status="PASS" start="2026-09-20T07:49:12.286612" elapsed="1.105570"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-09-19T07:10:54.861681" level="INFO">Opening url 'https://www.electrolux.it/'</msg>
-<arg>https://www.electrolux.it/</arg>
+<msg time="2026-09-20T07:49:13.401700" level="INFO">Opening url 'https://www.electrolux.it/'</msg>
+<arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-09-19T07:10:54.860488" elapsed="0.436387"/>
+<status status="PASS" start="2026-09-20T07:49:13.395436" elapsed="1.087411"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-09-19T07:10:55.297641" elapsed="2.232156"/>
+<status status="PASS" start="2026-09-20T07:49:14.486455" elapsed="2.890981"/>
 </kw>
 <doc>This keyword navigates to the homepage of the website.</doc>
-<status status="PASS" start="2026-09-19T07:10:53.738368" elapsed="3.791623"/>
+<status status="PASS" start="2026-09-20T07:49:12.286195" elapsed="5.091953"/>
 </kw>
 <kw name="Accept Cookies for website">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>onetrust-group-container</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.530921" elapsed="0.016918"/>
+<status status="PASS" start="2026-09-20T07:49:17.382498" elapsed="0.021391"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-09-19T07:10:57.548159" level="INFO">Clicking button 'onetrust-accept-btn-handler'.</msg>
+<msg time="2026-09-20T07:49:17.404438" level="INFO">Clicking button 'onetrust-accept-btn-handler'.</msg>
 <arg>onetrust-accept-btn-handler</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.547968" elapsed="0.063044"/>
+<status status="PASS" start="2026-09-20T07:49:17.404118" elapsed="0.072338"/>
 </kw>
 <doc>This keyword accepts the cookies for the website.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.530543" elapsed="0.080608"/>
+<status status="PASS" start="2026-09-20T07:49:17.381305" elapsed="0.095295"/>
 </kw>
 <kw name="Validate Homepage Category section">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css:.home-page__container</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.611869" elapsed="0.006349"/>
+<status status="PASS" start="2026-09-20T07:49:17.477103" elapsed="0.006847"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-09-19T07:10:57.680824" level="INFO">Element 'css:._category__title_qys5y_9' is displayed.</msg>
+<msg time="2026-09-20T07:49:17.492714" level="INFO">Element 'css:._category__title_qys5y_9' is displayed.</msg>
 <arg>css:._category__title_qys5y_9</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.618321" elapsed="0.062579"/>
+<status status="PASS" start="2026-09-20T07:49:17.484110" elapsed="0.008693"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-09-19T07:10:57.687567" level="INFO">${category_title} = Acquista per categorie</msg>
+<msg time="2026-09-20T07:49:17.499719" level="INFO">${category_title} = Acquista per categorie</msg>
 <var>${category_title}</var>
 <arg>css:._category__title_qys5y_9</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.681016" elapsed="0.006579"/>
+<status status="PASS" start="2026-09-20T07:49:17.492924" elapsed="0.006827"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${category_title}</arg>
 <arg>Acquista per categorie</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.687750" elapsed="0.000406"/>
+<status status="PASS" start="2026-09-20T07:49:17.499963" elapsed="0.001211"/>
 </kw>
 <doc>This keyword validates the homepage category section of the website.</doc>
-<status status="PASS" start="2026-09-19T07:10:57.611453" elapsed="0.076746"/>
+<status status="PASS" start="2026-09-20T07:49:17.476858" elapsed="0.024471"/>
 </kw>
 <doc>This test case validates the homepage details of the website.</doc>
-<status status="PASS" start="2026-09-19T07:10:53.737982" elapsed="3.950343"/>
+<status status="PASS" start="2026-09-20T07:49:12.285780" elapsed="5.216420"/>
 </test>
 <doc>To test the homepage of the website</doc>
-<status status="PASS" start="2026-09-19T07:10:53.604742" elapsed="4.084056"/>
+<status status="PASS" start="2026-09-20T07:49:12.139404" elapsed="5.363936"/>
 </suite>
-<status status="PASS" start="2026-09-19T07:10:53.604325" elapsed="4.084849"/>
+<status status="PASS" start="2026-09-20T07:49:12.138875" elapsed="5.364966"/>
 </suite>
-<status status="PASS" start="2026-09-19T07:10:53.585232" elapsed="4.104135"/>
+<status status="PASS" start="2026-09-20T07:49:12.113613" elapsed="5.390445"/>
 </suite>
 <statistics>
 <total>

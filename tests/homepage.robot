@@ -2,21 +2,25 @@
 Documentation    To test the homepage of the website
 Library    SeleniumLibrary
 
+*** Variables ***
+${BROWSER}    Chrome
+${URL}        https://www.electrolux.it/
+
+
 *** Test Cases ***
 Validate Homepage Details
     [Documentation]    This test case validates the homepage details of the website.
     Navigate to Homepage
     Accept Cookies for website
     Validate Homepage Category section
-    
-    
-    
+
 **** Keywords ***
 Navigate to Homepage
-      [Documentation]    This keyword navigates to the homepage of the website.
-    create WebDriver     Chrome
-    Go To                https://www.electrolux.it/
+    [Documentation]    This keyword navigates to the homepage of the website.
+    create WebDriver     ${BROWSER}
+    Go To                ${URL}
     Maximize Browser Window
+
 Accept Cookies for website
     [Documentation]    This keyword accepts the cookies for the website.
     Wait Until Element Is Visible    onetrust-group-container
